@@ -1,0 +1,30 @@
+body{
+    background:skyblue;
+    min-height: 100vh;
+}
+body, .parent{
+    display:flex;
+    justify-content: center;
+    align-items: center ;
+}
+.parent{
+    gap: 20px;
+    color: rgb(125, 11, 233);
+    font-size: 5rem;
+    height: 90px;
+    overflow: hidden;
+}
+.child{
+    width: 350px;
+    height: 295px;
+    transition: translateY(100px);
+    animation: move 3s alternate infinite;
+}
+@keyframes move{
+    33%,66%{
+        transform: translateY(90px); 
+    }
+          66% , 100%{
+            transform: translateY(-80px);
+        }
+}
